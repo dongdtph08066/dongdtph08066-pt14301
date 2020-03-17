@@ -1,0 +1,52 @@
+<div class="row">
+    <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
+    <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
+    <app-product class="col-lg-4 col-md-6 mb-4"></app-product>
+
+<div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+            <div class="card h-100 ">
+                <a href="# "><img class="card-img-top " alt=" "></a>
+                <div class="card-body ">
+                    <h4 class="card-title ">
+                        <a href="# ">{{product.name}}</a>
+                    </h4>
+                    <h5>${{product.price}}</h5>
+                    <p class="card-text ">{{product.desc}}</p>
+                    <button (click)="ShowDetail(product) ">chi tiet</button>
+                    <button (click)="removeItem(product.id) ">xoa</button>
+
+                </div>
+
+            </div>
+
+        </div>
+ <table class="table table-bordered" *ngFor="let pro of pros">
+    <thead>
+        <tr>
+            <th>{{pro.name}}</th>
+            <th>${{pro.price}}</th>
+            <th>{{pro.desc}}</th>
+            <th><button (click)="removeItemm(pro.id) ">xoa</button>
+                <button (click)="ShowDetable(pro) ">chi tiet</button>
+        </tr>
+
+
+        <!-- <tr>
+
+                <th>nguyen van a</th>
+                <th>30 tuoi</th>
+                <th><button (click)="removeItem(product.id) ">xoa</button>
+                    <button class="button button-big">Hien thi</button></th>
+            </tr>
+            <tr>
+
+                <th>nguyen van a</th>
+                <th>30 tuoi</th>
+                <th><button (click)="removeItem(product.id) ">xoa</button>
+                    <button class="button button-big">Hien thi</button></th>
+            </tr> -->
+    </thead>
+</table>
+
+<p *ngIf="selected">{{selected.name}}</p>
+<p *ngIf="selected">{{selectedd.name}}</p>
