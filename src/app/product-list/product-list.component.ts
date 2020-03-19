@@ -3,19 +3,21 @@ import{ data } from '../MockData';
 import { Product } from '../Product';
 import { Pro } from '../Pro';
 import{ datas } from '../MockTable';
-
+import { ProductService} from './service/product.service';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-
-  constructor() { }
+  products : Product[]
+  
+  constructor(
+     private productService : ProductService ) { }
 
   ngOnInit() {
-  }
- products= data;
+    this.products = this.productService.getProucts();
+  } 
   selected: Product;
 //   products = data;
 //    selected: Product;
