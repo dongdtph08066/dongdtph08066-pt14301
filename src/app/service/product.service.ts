@@ -27,4 +27,7 @@ export class ProductService {
   editProduct() {
     // sua san pham
   }
+  updateProduct(product){ //update san pham
+    return this.products.map(item => item.id === product.id ? product: item);
+  }
 }
