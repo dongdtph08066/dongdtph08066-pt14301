@@ -11,7 +11,8 @@ export class ProductService {
     //lay danh sach san pham
     return this.products;
   }
-  getProduct() {
+  getProduct(id) {
+    return this.products.find(product => product.id == id);
     // chi tiet san pham
   
   }
