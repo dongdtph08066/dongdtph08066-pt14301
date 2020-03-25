@@ -15,6 +15,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductService } from './service/product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { HomeComponent } from './home/home.component';
+import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AboutComponent } from './about/about.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
@@ -22,7 +23,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,  AppRoutingModule , HttpClientModule],
-  declarations: [ AppComponent, HelloComponent, SlideComponent, ProductComponent, ProductListComponent, CategoryComponent, ProductDetailComponent, ProductAddComponent, HomeComponent, NotFoundComponent, AboutComponent, ProductEditComponent, ],
+  declarations: [ AppComponent, HelloComponent, SlideComponent, ProductComponent, ProductListComponent, CategoryComponent, ProductDetailComponent, ProductAddComponent, HomeComponent, NotFoundComponent, AboutComponent, ProductEditComponent, ProductManagerComponent],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
