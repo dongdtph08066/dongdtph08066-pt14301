@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { AboutComponent } from './about/about.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
+import { ServeComponent } from './serve/serve.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,9 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductDetailComponent},
   { path:'product-manager', component: ProductManagerComponent },
   { path: 'product/edit/:id', component: ProductEditComponent},
+  { path: 'serve', component: ServeComponent},
   { path: '**', component: NotFoundComponent}
+
 
 
 ];
