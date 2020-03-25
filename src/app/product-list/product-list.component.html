@@ -1,22 +1,24 @@
-<div class="row">
-    <div ngClass="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" alt=""></a>
-        <div class="card-body">
-            <h4 class="card-title">
-            <a href="#">{{product.name}}</a>
-            </h4>
-            <h5>${{product.price}}</h5>
-            <p class="card-text">{{product.desc}}</p>
-            <button (click)="showDetail(product)" routerLink="product/:id">Chi tiết</button>
-            <button (click)="removeItem(product.id)">Xóa</button>
-        </div>
-        </div>
-    </div>
-    
-  </div>
 
+  <div class="row">
+	<div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
+		<div class="card h-100">
+			<a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+				<div class="card-body">
+					<h4 class="card-title">
+            <p>{{product.id}}</p>
+						<a href="#">{{product.name}}</a>
+					</h4>
+					<h5>${{product.price}}</h5>
+					<p class="card-text">{{product.desc}}</p>
+				</div>
+				<div class="card-footer">
+					<button  routerLink="/product/{{product.id}}">Chi tiết</button>				
+					<button  (click)="removeItem(product.id)">Xóa</button>
+				</div>
+		</div>
+	</div>
+</div>
 <!-- <div *ngIf="selected">
-  <app-product-detail [data]="selected"></app-product-detail>
+<app-product-detail [data]= "selected"></app-product-detail>
 </div> -->
 
