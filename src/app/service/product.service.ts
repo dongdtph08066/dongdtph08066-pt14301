@@ -7,24 +7,14 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class ProductService {
-  products = data;
- api = 'https://5e79b4b817314d00161333da.mockapi.io/';
-
-  
+api = 'https://5e7b60c70e0463001633324f.mockapi.io/products';
   constructor(
     private http: HttpClient
-  ) {}
-  // getProducts() {
-  //   // lấy danh sách sp
-  //   return this.products;
-  // }
-  // getProduct(id) {
-  //   return this.products.find(product => product.id == id);
-  // } //chi tiết sp
+  ) { }
+
   getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.api}/product`);
-    //lay danh sach san pham
-  //   // return this.products;
+    // return this.products;
+    return this.http.get<Product[]>(this.api);
   }
   getProduct(id): Observable<Product> {
     return this.http.get<Product>(`${this.api}/${id}`);
