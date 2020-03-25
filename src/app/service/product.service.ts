@@ -20,6 +20,7 @@ export class ProductService {
     // return this.products;
   }
   getProduct(id) {
+    
     return this.products.find(product => product.id == id);
     // chi tiet san pham
   

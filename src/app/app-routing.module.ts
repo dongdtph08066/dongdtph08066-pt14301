@@ -12,7 +12,7 @@ import productAddComponentHtml from './product-add/product-add.component.html';
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-  {path: "about", component:aboutComponentHtml},
+  {path: "about", component :aboutComponentHtml},
   { path: 'add-product', component: ProductAddComponent},
   { path: 'products', component: ProductListComponent},
   { path: 'product/:id', component: ProductDetailComponent},
