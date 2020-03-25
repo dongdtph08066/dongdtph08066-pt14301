@@ -17,9 +17,8 @@ const routes: Routes = [
   { path: 'add-product', component: ProductAddComponent},
   { path: 'products', component: ProductListComponent},
   { path: 'product/:id', component: ProductDetailComponent},
-    { path:'product-manager', component: ProductManagerComponent },
+  { path:'product-manager', component: ProductManagerComponent },
   { path: 'product/edit/:id', component: ProductEditComponent},
- 
   { path: '**', component: NotFoundComponent}
 
 
