@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class ProductService {
   products = data;
-  api = 'https://5e79b4b817314d00161333da.mockapi.io/'
+ api = 'https://5e79b4b817314d00161333da.mockapi.io/';
 
   
   constructor(
@@ -26,14 +26,13 @@ export class ProductService {
     //lay danh sach san pham
   //   // return this.products;
   }
-  getProduct(id): Observable<Product[]> {
-    console.log(id);
-
-    return this.http.get<Product[]>(`${this.api}/${id}`)
+  getProduct(id): Observable<Product> {
+    return this.http.get<Product>(`${this.api}/${id}`);
+  }
     // return this.products.find(product => product.id == id);
     // chi tiet san pham
   
-  }
+  
   removeProduct(id) {
     //xoa san pham
     return (this.products = this.products.filter(product => product.id != id));

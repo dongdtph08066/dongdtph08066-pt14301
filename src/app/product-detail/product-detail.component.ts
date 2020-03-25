@@ -15,21 +15,19 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.getProduct();
-    this.route.params.subscribe(param =>{
-      this.product = this.productService.getProduct(param.id);
+    this.getProduct();
+    // this.route.params.subscribe(param =>{
+    //   this.product = this.productService.getProduct(param.id);
     
-  })
+
   }
-  getProduct(){
+    getProduct() {
     this.route.params.subscribe(param => {
-      this.productService.getProduct(param.id).subscribe(data =>{
-        this.product=data;
+      console.log(param)
+      this.productService.getProduct(param.id).subscribe(data => {
+        this.product = data;
       })
-
-    })
-    ;
-
+    });
   }
 
 }

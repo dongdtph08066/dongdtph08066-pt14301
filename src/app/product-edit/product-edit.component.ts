@@ -19,9 +19,9 @@ product :Product;
   ngOnInit() {
     this.getProduct();
   }
- getProducts(){
-    this.productService.getProducts().subscribe(response => this.products = response, error => console.log(error));
-  }
+getProduct(){
+    this.route.params.subscribe(param =>{ this.product= this.productService.getProduct(param.id);})
+} 
 submitForm(){
    this.productService.updateProduct(this.product);
     this.router.navigate(['/products']);
