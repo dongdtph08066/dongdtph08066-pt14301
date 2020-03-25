@@ -6,14 +6,17 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import aboutComponentHtml from './about/about.component.html';
+import productAddComponentHtml from './product-add/product-add.component.html';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent},
+  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: HomeComponent },
+  {path: "about", component:aboutComponentHtml},
   { path: 'add-product', component: ProductAddComponent},
-
   { path: 'products', component: ProductListComponent},
   { path: 'product/:id', component: ProductDetailComponent},
+    { path: "manager-product", component: productAddComponentHtml },
   { path: 'product/edit/:id', component: ProductEditComponent},
   { path: '**', component: NotFoundComponent}
 
